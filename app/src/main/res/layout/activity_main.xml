@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent">
+
+        <LinearLayout
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             android:paddingEnd="10dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal"
+             android:paddingStart="10dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textAppearance="?textAppearanceTitleLarge"
+                 android:text="@string/app_name"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:paddingBottom="80dp"
+         android:clipToPadding="false"
+         android:id="@+id/rvAccounts"
+         android:paddingTop="8dp" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:visibility="gone"
+         android:textColor="#9E9E9E"
+         android:id="@+id/tvEmpty"
+         android:layout_gravity="center"
+         android:text="Aún no has agregado cuentas" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingBottom="20dp"
+         android:paddingTop="10dp"
+         android:paddingEnd="10dp"
+         android:background="@color/bg_elevated"
+         android:orientation="horizontal"
+         android:gravity="center_vertical"
+         android:paddingStart="10dp"
+         android:layout_gravity="bottom|end">
+
+        <LinearLayout
+             android:layout_height="56dp"
+             android:layout_width="0dp"
+             android:layout_marginBottom="4dp"
+             android:layout_marginEnd="6dp"
+             android:background="@drawable/bg_fw_search_bar"
+             android:gravity="center_vertical"
+             android:orientation="horizontal"
+             android:layout_marginTop="6dp"
+             android:layout_weight="1"
+             android:id="@+id/searchBar">
+
+            <ImageView
+                 android:layout_height="24dp"
+                 android:layout_width="24dp"
+                 android:src="@drawable/ic_search"
+                 android:tint="@color/text_dim"
+                 android:importantForAccessibility="no"
+                 android:layout_marginStart="16dp" />
+
+            <EditText
+                 android:layout_height="match_parent"
+                 android:layout_width="0dp"
+                 android:imeOptions="actionSearch"
+                 android:importantForAutofill="no"
+                 android:layout_marginStart="12dp"
+                 android:background="@null"
+                 android:gravity="center_vertical"
+                 android:hint="Buscar"
+                 android:textAppearance="?attr/textAppearanceBodyLarge"
+                 android:maxLines="1"
+                 android:layout_weight="1"
+                 android:inputType="text"
+                 android:id="@+id/searchInput" />
+
+            <ImageButton
+                 android:layout_height="40dp"
+                 android:layout_width="40dp"
+                 android:visibility="gone"
+                 android:contentDescription="Borrar búsqueda"
+                 android:src="@drawable/ic_close"
+                 android:tint="@color/text_dim"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:padding="8dp"
+                 android:id="@+id/btnClearSearch" />
+
+        </LinearLayout>
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             app:icon="@drawable/ic_add"
+             style="?attr/materialIconButtonFilledStyle"
+             app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Medium"
+             android:id="@+id/fabAdd" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

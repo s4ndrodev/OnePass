@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:icon="@drawable/ic_arrow_back"
+                android:contentDescription="Navegar hacia atrás"
+                app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                app:iconTint="@color/text"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:id="@+id/backHome" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textAppearance="?textAppearanceTitleLarge"
+                android:layout_weight="1"
+                android:id="@+id/title"
+                android:text=""
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:icon="@drawable/ic_save"
+                android:contentDescription="Guardar"
+                app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                app:iconTint="@color/text"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:id="@+id/btnSave" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="16dp"
+        app:strokeColor="@color/border"
+        app:cardBackgroundColor="@color/card"
+        android:layout_marginStart="16dp">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textAppearance="?textAppearanceBodyMedium"
+                android:textColor="@color/text_dim"
+                android:text="Título" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:hint="Sin título"
+                android:textSize="28dp"
+                android:id="@+id/etLabel" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="16dp"
+        app:strokeColor="@color/border"
+        app:cardBackgroundColor="@color/card"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/ic_user"
+                    android:tint="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:hint="Usuario o correo electrónico"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/etUsername" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/ic_key"
+                    android:tint="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Contraseña"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:layout_marginStart="10dp"
+                    android:inputType="textVisiblePassword"
+                    android:id="@+id/etPassword" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:icon="@drawable/ic_generate_key"
+                    android:visibility="gone"
+                    android:contentDescription="Generar contraseña"
+                    app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                    app:iconTint="@color/text"
+                    style="?attr/materialIconButtonFilledTonalStyle"
+                    android:id="@+id/btnGeneratePassword" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/ic_otp"
+                    android:tint="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@null"
+                    android:hint="Secreto OTP"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/etOtpSecret" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnScanQr"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="Escanear QR" />
+
+        <Button
+            android:id="@+id/btnPickQr"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="Desde galería" />
+    </LinearLayout>
+
+</LinearLayout>

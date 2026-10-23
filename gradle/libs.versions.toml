@@ -1,0 +1,33 @@
+[versions]
+agp = "8.13.0"
+core = "1.17.0"
+appcompat = "1.7.1"
+material = "1.14.0"
+constraintlayout = "2.2.1"
+totp = "1.7.1"
+room = "2.6.1"
+sqlcipher = "4.5.4"
+sqlite = "2.4.0"
+preference = "1.2.1"
+security-crypto = "1.1.0-alpha06"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
+[libraries]
+androidx-core = { group = "androidx.core", name = "core", version.ref = "core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+totp = { group = "dev.samstevens.totp", name = "totp", version.ref = "totp" }
+
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+android-database-sqlcipher = { group = "net.zetetic", name = "android-database-sqlcipher", version.ref = "sqlcipher" }
+sqlite = { group = "androidx.sqlite", name = "sqlite", version.ref = "sqlite" }
+
+preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
+security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "security-crypto" }
+zxing-android-embedded = { group = "com.journeyapps", name = "zxing-android-embedded", version = "4.3.0" }

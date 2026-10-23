@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:paddingEnd="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:icon="@drawable/ic_arrow_back"
+                android:contentDescription="Navegar hacia atrás"
+                app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                app:iconTint="@color/text"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:id="@+id/backHome" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textAppearance="?textAppearanceTitleLarge"
+                android:layout_weight="1"
+                android:id="@+id/title"
+                android:text=""
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:icon="@drawable/ic_edit"
+                android:contentDescription="Editar cuenta"
+                app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                app:iconTint="@color/text"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:id="@+id/btnEdit" />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:icon="@drawable/ic_delete"
+                android:contentDescription="Eliminar cuenta"
+                app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                app:iconTint="@color/text"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:id="@+id/btnDelete" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:strokeColor="@color/border"
+        android:layout_margin="24dp"
+        app:cardBackgroundColor="@color/card">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingEnd="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingStart="10dp"
+                android:focusable="true"
+                android:id="@+id/copyAlias"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/ic_user"
+                    android:tint="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="@color/text_dim"
+                        android:text="Nombre de usuario" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?textAppearanceBodyLarge"
+                        android:textColor="@color/text"
+                        android:id="@+id/tvAliasDetail" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingEnd="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingStart="10dp"
+                android:focusable="true"
+                android:id="@+id/copyPassword"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/ic_key"
+                    android:tint="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="@color/text_dim"
+                        android:text="Contraseña" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?textAppearanceBodyLarge"
+                        android:textColor="@color/text"
+                        android:id="@+id/tvPassword" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:icon="@drawable/ic_show_eye"
+                    android:contentDescription="Mostrar contraseña"
+                    app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.IconButton.Small"
+                    app:iconTint="@color/text"
+                    style="?attr/materialIconButtonFilledTonalStyle"
+                    android:id="@+id/btnShowPassword" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerOtp"
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingEnd="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingStart="10dp"
+                android:focusable="true"
+                android:id="@+id/copyOTP"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_width="24dp"
+                    android:src="@drawable/ic_otp"
+                    android:tint="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="@color/text_dim"
+                        android:text="Código 2FA (TOTP)" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?textAppearanceBodyLarge"
+                        android:textColor="@color/text"
+                        android:id="@+id/tvCode" />
+
+                </LinearLayout>
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:indicatorSize="40dp"
+                    app:trackCornerRadius="6dp"
+                    style="@style/Widget.Material3Expressive.CircularProgressIndicator"
+                    app:trackThickness="6dp"
+                    app:indicatorTrackGapSize="6dp"
+                    android:id="@+id/progressTimer" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:layout_height="72dp"
+        android:layout_width="72dp"
+        android:visibility="gone"
+        android:contentDescription="Logo del servicio"
+        android:src="@drawable/ic_default_account"
+        android:id="@+id/ivLogoDetail" />
+
+</LinearLayout>
